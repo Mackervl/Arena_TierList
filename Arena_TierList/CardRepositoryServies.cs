@@ -45,7 +45,15 @@ namespace Arena_TierList
         }
         public IEnumerable<Card> GetByHero(int heroid)
         {
-            return _context.Cards.Where(x => x.HeroId == heroid).OrderByDescending(x=>x.Value).ToList();
+            if (heroid == 1)
+            {
+                return _context.Cards.Where(x => x.HeroId == heroid).OrderByDescending(x => x.Value);
+            }
+            else
+            {
+                return _context.Cards.Where(x => x.HeroId == heroid || x.HeroId==1).OrderByDescending(x => x.Value);
+            }
+           
         } 
     }
 }

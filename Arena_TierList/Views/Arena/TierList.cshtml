@@ -7,33 +7,44 @@
 
 <h1>TierList</h1>
 <div class="container-fluid banner">
-   <img src="~/banner5.png" />
+    <img src="~/banner5.png" />
 </div>
-<div class="container-fluid" style="display:flex">
+
+<nav class="navbar navbar-light" style="background-color:#4a341d">
+    <a id="Dh" class="navbar-brand" asp-controller="Arena" asp-action="HeroTierList" asp-route-id="3">
+        <img src="~/DHI.png" width="30" height="30" alt="">
+    </a>
+</nav>
+
+
+<div id="mainc" class="container-fluid" style="display:flex">
     <ul class="list-group">
         @foreach (var vgc in Model.VeryGood)
         {
-            <li class="list-group-item cardItem">
+            string s =  "hero"+vgc.HeroId.ToString();
+
+            <li class="list-group-item cardItem @s" >
                 <div class="cardName">
                     <a src="" class="link">
                         @vgc.Name
-                    <span>
-                        <img style="width:120px;height:200px" src="data:image/jpeg;base64,@(Convert.ToBase64String(vgc.Image))" />
-                    </span>
-                </a>
-            </div>
-            <div class="cardValue">
-                @vgc.Value
-            </div>
+                        <span>
+                            <img style="width:120px;height:200px" src="data:image/jpeg;base64,@(Convert.ToBase64String(vgc.Image))" />
+                        </span>
+                    </a>
+                </div>
+                <div class="cardValue">
+                    @vgc.Value
+                </div>
 
-        </li>
-    }
+            </li>
+        }
     </ul>
 
     <ul class="list-group">
         @foreach (var vgc in Model.Good)
         {
-            <li class="list-group-item cardItem">
+             string s =  "hero"+vgc.HeroId.ToString();
+            <li class="list-group-item cardItem @s">
                 <div class="cardName">
                     <a src="" class="link">
                         @vgc.Name
@@ -54,7 +65,8 @@
     <ul class="list-group">
         @foreach (var vgc in Model.VeryMiddle)
         {
-            <li class="list-group-item cardItem">
+             string s =  "hero"+vgc.HeroId.ToString();
+            <li class="list-group-item cardItem @s">
                 <div class="cardName">
                     <a src="" class="link">
                         @vgc.Name
@@ -75,7 +87,8 @@
     <ul class="list-group">
         @foreach (var vgc in Model.Middle)
         {
-            <li class="list-group-item cardItem">
+             string s =  "hero"+vgc.HeroId.ToString();
+            <li class="list-group-item cardItem @s">
                 <div class="cardName">
                     <a src="" class="link">
                         @vgc.Name
@@ -94,7 +107,8 @@
     <ul class="list-group">
         @foreach (var vgc in Model.LessMiddle)
         {
-            <li class="list-group-item cardItem">
+             string s =  "hero"+vgc.HeroId.ToString();
+            <li class="list-group-item cardItem @s">
                 <div class="cardName">
                     <a src="" class="link">
                         @vgc.Name
@@ -114,7 +128,8 @@
     <ul class="list-group">
         @foreach (var vgc in Model.Bad)
         {
-            <li class="list-group-item cardItem">
+             string s =  "hero"+vgc.HeroId.ToString();
+            <li class="list-group-item cardItem @s">
                 <div class="cardName">
                     <a src="" class="link">
                         @vgc.Name
@@ -133,7 +148,8 @@
     <ul class="list-group">
         @foreach (var vgc in Model.LessBad)
         {
-            <li class="list-group-item cardItem">
+             string s =  "hero"+vgc.HeroId.ToString();
+            <li class="list-group-item cardItem @s">
                 <div class="cardName">
                     <a src="" class="link">
                         @vgc.Name
@@ -152,10 +168,10 @@
 </div>
 
 
-    @section Scripts{
-        <sript>
+@section Scripts{
+    <sript>
+       
 
-            
-        </sript>
+    </sript>
 
-    }
+}

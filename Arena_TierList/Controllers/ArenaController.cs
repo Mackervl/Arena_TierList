@@ -26,5 +26,12 @@ namespace Arena_TierList.Controllers
             var sorted = _sortService.SortOnValue(cards);
             return View(sorted);
         }
+       
+        public IActionResult HeroTierList(int id)
+        {
+            var cards =  _repService.GetByHero(id).ToList();
+            var sorted = _sortService.SortOnValue(cards);
+            return View("TierList",sorted);
+        }
     }
 }

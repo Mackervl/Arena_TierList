@@ -1,0 +1,161 @@
+﻿@using Arena_TierList.Models
+@model OnValueHelperModel
+
+@{
+    ViewData["Title"] = "TierList";
+}
+
+<h1>TierList</h1>
+<div class="container-fluid banner">
+   <img src="~/banner5.png" />
+</div>
+<div class="container-fluid" style="display:flex">
+    <ul class="list-group">
+        @foreach (var vgc in Model.VeryGood)
+        {
+            <li class="list-group-item cardItem">
+                <div class="cardName">
+                    <a src="" class="link">
+                        @vgc.Name
+                    <span>
+                        <img style="width:120px;height:200px" src="data:image/jpeg;base64,@(Convert.ToBase64String(vgc.Image))" />
+                    </span>
+                </a>
+            </div>
+            <div class="cardValue">
+                @vgc.Value
+            </div>
+
+        </li>
+    }
+    </ul>
+
+    <ul class="list-group">
+        @foreach (var vgc in Model.Good)
+        {
+            <li class="list-group-item cardItem">
+                <div class="cardName">
+                    <a src="" class="link">
+                        @vgc.Name
+                        <span>
+                            <img style="width:120px;height:200px" src="data:image/jpeg;base64,@(Convert.ToBase64String(vgc.Image))" />
+                        </span>
+                    </a>
+                </div>
+                <div class="cardValue">
+                    @vgc.Value
+                </div>
+
+            </li>
+        }
+
+    </ul>
+
+    <ul class="list-group">
+        @foreach (var vgc in Model.VeryMiddle)
+        {
+            <li class="list-group-item cardItem">
+                <div class="cardName">
+                    <a src="" class="link">
+                        @vgc.Name
+                        <span>
+                            <img style="width:120px;height:200px" src="data:image/jpeg;base64,@(Convert.ToBase64String(vgc.Image))" />
+                        </span>
+                    </a>
+                </div>
+                <div class="cardValue">
+                    @vgc.Value
+                </div>
+
+            </li>
+
+
+        }
+    </ul>
+    <ul class="list-group">
+        @foreach (var vgc in Model.Middle)
+        {
+            <li class="list-group-item cardItem">
+                <div class="cardName">
+                    <a src="" class="link">
+                        @vgc.Name
+                        <span>
+                            <img style="width:120px;height:200px" src="data:image/jpeg;base64,@(Convert.ToBase64String(vgc.Image))" />
+                        </span>
+                    </a>
+                </div>
+                <div class="cardValue">
+                    @vgc.Value
+                </div>
+
+            </li>
+        }
+    </ul>
+    <ul class="list-group">
+        @foreach (var vgc in Model.LessMiddle)
+        {
+            <li class="list-group-item cardItem">
+                <div class="cardName">
+                    <a src="" class="link">
+                        @vgc.Name
+                        <span>
+                            <img style="width:120px;height:200px" src="data:image/jpeg;base64,@(Convert.ToBase64String(vgc.Image))" />
+                        </span>
+                    </a>
+                </div>
+                <div class="cardValue">
+                    @vgc.Value
+                </div>
+
+            </li>
+
+        }
+    </ul>
+    <ul class="list-group">
+        @foreach (var vgc in Model.Bad)
+        {
+            <li class="list-group-item cardItem">
+                <div class="cardName">
+                    <a src="" class="link">
+                        @vgc.Name
+                        <span>
+                            <img style="width:120px;height:200px" src="data:image/jpeg;base64,@(Convert.ToBase64String(vgc.Image))" />
+                        </span>
+                    </a>
+                </div>
+                <div class="cardValue">
+                    @vgc.Value
+                </div>
+
+            </li>
+        }
+    </ul>
+    <ul class="list-group">
+        @foreach (var vgc in Model.LessBad)
+        {
+            <li class="list-group-item cardItem">
+                <div class="cardName">
+                    <a src="" class="link">
+                        @vgc.Name
+                        <span>
+                            <img style="width:120px;height:200px" src="data:image/jpeg;base64,@(Convert.ToBase64String(vgc.Image))" />
+                        </span>
+                    </a>
+                </div>
+                <div class="cardValue">
+                    @vgc.Value
+                </div>
+
+            </li>
+        }
+    </ul>
+</div>
+
+
+    @section Scripts{
+        <sript>
+
+            
+        </sript>
+
+    }

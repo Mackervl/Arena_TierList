@@ -18,6 +18,8 @@
     <PackageReference Include="React.AspNet" Version="5.2.6" />
   </ItemGroup>
 
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
+
 
 
 </Project>

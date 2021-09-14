@@ -1,4 +1,4 @@
-﻿using Arena_TierList.Data;
+﻿using Arena_TierList.ArenaTierList.Repository.Context;
 using Arena_TierList.Models;
 using System;
 using System.Collections.Generic;
@@ -11,7 +11,7 @@ namespace Arena_TierList
     {
 
         public OnValueHelperModel sortedCards { get; set; }
-        public SortCardService(Context context)
+        public SortCardService(ApplicationDbContext context)
         {
 
             sortedCards = new OnValueHelperModel();

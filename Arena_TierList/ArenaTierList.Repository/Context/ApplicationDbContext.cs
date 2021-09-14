@@ -5,16 +5,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Arena_TierList.Data
+namespace Arena_TierList.ArenaTierList.Repository.Context
 {
-    public class Context : DbContext
+    public class ApplicationDbContext : DbContext
     {
+
         public DbSet<Hero> Heroes { get; set; }
         public DbSet<Card> Cards { get; set; }
-        public Context(DbContextOptions<Context> options)
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
         : base(options)
         {
-         
+            Database.EnsureCreated();
         }
     }
 }

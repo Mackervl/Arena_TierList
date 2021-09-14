@@ -9,10 +9,36 @@
 <div class="container-fluid banner">
     <img src="~/banner5.png" />
 </div>
-
 <nav class="navbar navbar-light" style="background-color:#4a341d">
-    <a id="Dh" class="navbar-brand" asp-controller="Arena" asp-action="HeroTierList" asp-route-id="3">
-        <img src="~/DHI.png" width="30" height="30" alt="">
+    <a class="navbar-brand" asp-controller="Arena" asp-action="HeroTierList" asp-route-id="1">
+        <img src="~/DH.png" width="92" height="46" alt="">
+    </a>
+    <a class="navbar-brand" asp-controller="Arena" asp-action="HeroTierList" asp-route-id="2">
+        <img src="~/Druid.png" width="92" height="46" alt="">
+    </a>
+    <a class="navbar-brand" asp-controller="Arena" asp-action="HeroTierList" asp-route-id="11">
+        <img src="~/Hunt.png" width="92" height="46" alt="">
+    </a>
+    <a class="navbar-brand" asp-controller="Arena" asp-action="HeroTierList" asp-route-id="3">
+        <img src="~/Mage.png" width="92" height="46" alt="">
+    </a>
+    <a class="navbar-brand" asp-controller="Arena" asp-action="HeroTierList" asp-route-id="4">
+        <img src="~/Paladin.png" width="92" height="46" alt="">
+    </a>
+    <a class="navbar-brand" asp-controller="Arena" asp-action="HeroTierList" asp-route-id="5">
+        <img src="~/Priest.png" width="92" height="46" alt="">
+    </a>
+    <a class="navbar-brand" asp-controller="Arena" asp-action="HeroTierList" asp-route-id="6">
+        <img src="~/Rogue.png" width="92" height="46" alt="">
+    </a>
+    <a class="navbar-brand" asp-controller="Arena" asp-action="HeroTierList" asp-route-id="7">
+        <img src="~/Shaman.png" width="92" height="46" alt="">
+    </a>
+    <a class="navbar-brand" asp-controller="Arena" asp-action="HeroTierList" asp-route-id="9">
+        <img src="~/War.png" width="92" height="46" alt="">
+    </a>
+    <a class="navbar-brand" asp-controller="Arena" asp-action="HeroTierList" asp-route-id="8">
+        <img src="~/Warlock.png" width="92" height="46" alt="">
     </a>
 </nav>
 
@@ -21,9 +47,9 @@
     <ul class="list-group">
         @foreach (var vgc in Model.VeryGood)
         {
-            string s =  "hero"+vgc.HeroId.ToString();
+            string s = "hero" + vgc.HeroId.ToString();
 
-            <li class="list-group-item cardItem @s" >
+            <li class="list-group-item cardItem @s">
                 <div class="cardName">
                     <a src="" class="link">
                         @vgc.Name
@@ -43,7 +69,7 @@
     <ul class="list-group">
         @foreach (var vgc in Model.Good)
         {
-             string s =  "hero"+vgc.HeroId.ToString();
+            string s = "hero" + vgc.HeroId.ToString();
             <li class="list-group-item cardItem @s">
                 <div class="cardName">
                     <a src="" class="link">
@@ -65,7 +91,7 @@
     <ul class="list-group">
         @foreach (var vgc in Model.VeryMiddle)
         {
-             string s =  "hero"+vgc.HeroId.ToString();
+            string s = "hero" + vgc.HeroId.ToString();
             <li class="list-group-item cardItem @s">
                 <div class="cardName">
                     <a src="" class="link">
@@ -87,7 +113,7 @@
     <ul class="list-group">
         @foreach (var vgc in Model.Middle)
         {
-             string s =  "hero"+vgc.HeroId.ToString();
+            string s = "hero" + vgc.HeroId.ToString();
             <li class="list-group-item cardItem @s">
                 <div class="cardName">
                     <a src="" class="link">
@@ -107,7 +133,7 @@
     <ul class="list-group">
         @foreach (var vgc in Model.LessMiddle)
         {
-             string s =  "hero"+vgc.HeroId.ToString();
+            string s = "hero" + vgc.HeroId.ToString();
             <li class="list-group-item cardItem @s">
                 <div class="cardName">
                     <a src="" class="link">
@@ -128,7 +154,7 @@
     <ul class="list-group">
         @foreach (var vgc in Model.Bad)
         {
-             string s =  "hero"+vgc.HeroId.ToString();
+            string s = "hero" + vgc.HeroId.ToString();
             <li class="list-group-item cardItem @s">
                 <div class="cardName">
                     <a src="" class="link">
@@ -148,7 +174,7 @@
     <ul class="list-group">
         @foreach (var vgc in Model.LessBad)
         {
-             string s =  "hero"+vgc.HeroId.ToString();
+            string s = "hero" + vgc.HeroId.ToString();
             <li class="list-group-item cardItem @s">
                 <div class="cardName">
                     <a src="" class="link">
@@ -170,7 +196,7 @@
 
 @section Scripts{
     <sript>
-       
+
 
     </sript>
 

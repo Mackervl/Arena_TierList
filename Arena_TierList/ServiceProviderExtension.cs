@@ -1,4 +1,5 @@
-﻿using Arena_TierList.Models;
+﻿using Arena_TierList.ArenaTierList.Repository.Implementations;
+using Arena_TierList.Models;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -12,7 +13,7 @@ namespace Arena_TierList
 
         public static void AddCardRepositoryServies(this IServiceCollection services)
         {
-            services.AddScoped<ICardRepository, CardRepositoryServies>();
+            services.AddScoped<ICardRepository, CardRepository>();
            
         }
 

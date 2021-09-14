@@ -8,10 +8,9 @@ namespace Arena_TierList
     public interface IRepository<T>
     {
         IEnumerable<T> GetAll();
-        T GetById(long id);
+        Task<T> GetByIdAsync(long id);
         Task CreateAsync(T entity);
-        void Update(T entity);
-        Task DeleteAsync(long id);
-
+        Task UpdateAsync(T entity);
+        Task DeleteAsync(T entity);
     }
 }

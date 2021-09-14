@@ -8,7 +8,7 @@ namespace Arena_TierList
 {
     public interface ICardRepository : IRepository<Card> 
     {
-        IEnumerable<Card> GetByHero(int heroid);
+        IEnumerable<Card> GetByHeroId(int heroid);
       
     }
 }
